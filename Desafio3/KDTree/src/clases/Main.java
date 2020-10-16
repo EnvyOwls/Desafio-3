@@ -11,20 +11,13 @@ public class Main {
 	    @SuppressWarnings("unused")
 		public static void main(String args[]) throws IOException
 	    {
-	    	System.out.println(args[0]);
+	    	
 	    	String file="Desafio3.csv";
 	    	Reader lector=new Reader(file);
 	    	KDTree tree;
 	    	tree=lector.read(7400);
 	    	
 	    	int len=args.length;
-
-	    	
-	  
-	    	
-	    	
-	        
-	       
 	    	switch (len) {
 			case 1:
 				if (!args[0].toString().equals("-help"))
@@ -49,7 +42,7 @@ public class Main {
 					if (temp!=null)
 					{
 						//SHOWTIME
-						System.out.println("Id:"+temp.id+"\nNombre:  "+temp.track_name);
+						temp.showTime();
 						break;
 					}
 					else
@@ -75,8 +68,8 @@ public class Main {
 							{
 								System.out.println((i+1)+")");
 								temp=(KDNode)list.get(i);
-								System.out.println("Id:"+temp.id+"\nNombre:  "+temp.track_name);
-								System.out.println("\n");
+								temp.showTime();
+								System.out.println();
 							}
 							break;
 						}
@@ -118,10 +111,10 @@ public class Main {
 					int i=0;
 					for (i=0;i<10;i++)
 					{
-						System.out.println(i+")");
+						System.out.println((i+1)+")");
 						temp=(KDNode)list.get(i);
-						System.out.println("Id:"+temp.id+"\nNombre:  "+temp.track_name);
-						System.out.println("\n");
+						temp.showTime();
+						System.out.println();
 					}
 					break;
 				}

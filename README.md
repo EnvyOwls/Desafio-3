@@ -40,5 +40,41 @@ KDNode{
     private int ipadSc_urls_num;
     private int vpp_lic;
     
+    KDNode Parent;
+    KDNode Left;
+    KDNode Right;
+    
 }
 ~~~
+
+
+Para una mejor ejecución de la solución, se provee de un ejecutable.
+Para acceder a él se debe dirigir a la ubicación en donde se encuentra.
+
+1. Para ver informacion sobre una aplicacion especifica, ingresar: 
+
+~~~
+find [ id ]
+~~~
+
+2. Para ver las aplicaciones mas parecidas a una mediante su id, ingresar: 
+
+~~~
+similar [id]
+~~~
+
+3. Para ver las aplicaciones similares a una mediante un vector:
+
+~~~
+similar [size_bytes] [price] [rating_count_tot] [rating_count_ver] [user_rating] [user_rating_ver] [cont_rating] [prime_genre] [sup_devices_num] [lang_num]
+~~~
+
+
+Desde el ejecutable también es posible acceder a ayuda:
+
+~~~
+java -jar ejecutable.java -help
+~~~
+
+
+
